@@ -20,7 +20,8 @@
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 600px;
+    max-width: 615px;
+    overflow-y: auto;
     height: 75vh;
     display: flex;
     flex-direction: column;
@@ -34,11 +35,17 @@
     font-weight: 200;
 }
 
+
 .form-wrapper {
     width: 70%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+.form-label{
+    font-size: 20px;
+    font-family: body-font;
 }
 
 .form-input {
@@ -56,6 +63,19 @@
     width: 100%;
     padding: 20px 0px;
     cursor: pointer;
+}
+
+.exception {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--semiblack-color);
+}
+
+.exception-label {
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--semiblack-color);
 }
 
 .right-side {

@@ -10,20 +10,21 @@ export default function Login() {
           <img src="logo.jpeg" alt="Logo" className="logo" />
           <h2>Inventory management system</h2>
           <form className='form-wrapper'>
-            <label>Username</label>
+            <label className='form-label'>Username</label>
             <input className='form-input' type="text" placeholder="your@email.com" />
-            <label>Password</label>
+            <label className='form-label'>Password</label>
             <input className='form-input' type="password" placeholder="••••••••••" />
-            <div className="preference">
-                <input type="radio" name="preference" id="" />
-                Remember my preference
-            </div>
             <button className="login-btn">Login</button>
-            <div className="exception"> <span>Don't have an account?</span> Sign up</div>
+            <div className="exception">
+              <label className='exception-label'><input type="radio" name="preference" id="" />
+                Remember my preference
+              </label>
+              <Link to="/forgot-password">Forgot password?</Link>
+            </div>
           </form>
         </div>
       </div>
-
+      
       {/* Right Side: Slanted Background Image */}
       <div className="right-side"></div>
     </div>

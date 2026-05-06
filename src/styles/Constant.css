@@ -1,16 +1,22 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 @font-face {
   font-family: title-font;
-  src: url(styles/Poppins/Poppins-Bold.ttf);
+  src: url(Poppins/Poppins-Bold.ttf);
 }
 
 @font-face {
   font-family: sub-title-font;
-  src: url(styles/Poppins/Poppins-Medium.ttf);
+  src: url(Poppins/Poppins-Medium.ttf);
 }
 
 @font-face {
   font-family: body-font;
-  src: url(styles/Poppins/Poppins-Regular.ttf);
+  src: url(Poppins/Poppins-Regular.ttf);
 }
 
 :root {
@@ -25,7 +31,7 @@
   --white-color: white;
   --sub-bg-color: #333333;
   --text-color: #cccccc;
-  --semiblack-color: rgba(0, 0, 0, 0.45);
+  --semiblack-color: #79716B;
 }
 
 a {
