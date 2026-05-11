@@ -1,4 +1,10 @@
-import Icon from './Icon'
+import {
+  Search,
+  Plus,
+  Bell,
+  Settings,
+  User,
+} from 'lucide-react'
 import Sidebar from './Sidebar'
 
 export default function DashboardLayout({ children, title = 'Recent activity' }) {
@@ -9,22 +15,22 @@ export default function DashboardLayout({ children, title = 'Recent activity' })
       <main className="dashboard-main">
         <header className="topbar">
           <label className="search-box">
-            <Icon name="search" size={16} />
+            <Search size={16} strokeWidth={2.3} />
             <input type="search" placeholder="Search" />
           </label>
 
           <div className="topbar-actions">
             <button type="button" aria-label="Add">
-              <Icon name="plus" size={16} />
+              <Plus size={16} strokeWidth={2.3} />
             </button>
             <button type="button" aria-label="Notifications">
-              <Icon name="bell" size={16} />
+              <Bell size={16} strokeWidth={2.3} />
             </button>
             <button type="button" aria-label="Settings">
-              <Icon name="settings" size={16} />
+              <Settings size={16} strokeWidth={2.3} />
             </button>
             <button type="button" className="profile-button" aria-label="Profile">
-              <Icon name="user" size={16} />
+              <User size={17} strokeWidth={2.3} />
             </button>
           </div>
         </header>
