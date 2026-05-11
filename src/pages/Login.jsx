@@ -14,7 +14,9 @@ export default function Login() {
             <input className='form-input' type="text" placeholder="your@email.com" />
             <label className='form-label'>Password</label>
             <input className='form-input' type="password" placeholder="••••••••••" />
+            <Link to="/home">
             <button className="login-btn">Login</button>
+            </Link>
             <div className="exception">
               <label className='exception-label'><input type="radio" name="preference" id="" />
                 Remember my preference
