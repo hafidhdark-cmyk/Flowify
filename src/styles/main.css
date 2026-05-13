@@ -90,15 +90,26 @@
 /* Dashboard Shell */
 .dashboard-shell {
   min-height: 100vh;
+  width: 100%;
+  min-width: 1250px;
   display: grid;
-  grid-template-columns: 162px minmax(0, 1fr);
-  gap: 20px;
-  padding: 24px 20px 18px;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 30px;
   background: #f6f6f6;
 }
 
+.dashboard-main {
+  height: 100%;
+  min-height: 0;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
 .sidebar {
-  min-height: calc(100vh - 48px);
+  height: 100%;
+  width: 100%;
   border-radius: 6px;
   background: linear-gradient(180deg, #7a23e8 0%, #8429e6 100%);
   color: white;
@@ -112,6 +123,13 @@
   font-size: 17px;
   font-weight: 800;
   margin: 0 6px 34px;
+}
+
+.brand:hover {
+   background: var(--primary-dark);
+  border: solid 1px var(--white-color);
+  background: white;
+  color: var(--primary-color);
 }
 
 .sidebar-nav {
@@ -132,8 +150,11 @@
   font-weight: 800;
 }
 
-.sidebar-link.active {
+.sidebar-link:hover {
   background: var(--primary-dark);
+  border: solid 1px var(--white-color);
+  background: white;
+  color: var(--primary-color);
 }
 
 .sidebar-actions {
@@ -147,13 +168,9 @@
   font-size: 14px;
 }
 
-.dashboard-main {
-  min-width: 0;
-  padding: 6px 0 4px;
-}
-
 .topbar {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: space-between;
   gap: 20px;

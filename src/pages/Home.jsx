@@ -86,9 +86,7 @@ export default function Home() {
             ))}
 
           </div>
-          <button type="button" className="round-next category-next" aria-label="Next categories">
-            <ChevronRight size={22} strokeWidth={2.5} />
-          </button>
+          
         </article>
 
         <article className="panel stock-panel">
