@@ -22,13 +22,9 @@ const navItems = [
 
 
 
-export default function Sidebar() {
+export default function Sidebar({ onAddProduct }) {
   return (
     <aside className="sidebar">
-      <NavLink to="/home" className="brand">
-        Inventor.io
-      </NavLink>
-
       <nav className="sidebar-nav" aria-label="Dashboard navigation">
         {navItems.map((item) => (
           <NavLink key={item.path} to={item.path} className="sidebar-link">
@@ -39,10 +35,10 @@ export default function Sidebar() {
       </nav>
 
       <div className="sidebar-actions">
-        <NavLink to="/products" className="sidebar-link action-link">
+        <button type="button" className="sidebar-link action-link sidebar-action-button" onClick={onAddProduct}>
           <Plus size={15} strokeWidth={2.3} />
           <span>Add product</span>
-        </NavLink>
+        </button>
         <NavLink to="/" className="sidebar-link action-link">
           <LogOut size={15} strokeWidth={2.3} />
           <span>Log out</span>

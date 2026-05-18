@@ -6,21 +6,30 @@ import {
   User,
 } from 'lucide-react'
 import Sidebar from './Sidebar'
+import { NavLink } from 'react-router'
+import { useAddProduct } from './AddProductContext'
 
 export default function DashboardLayout({ children, title = 'Recent activity' }) {
+  const { openAddProduct } = useAddProduct()
+
   return (
     <div className="dashboard-shell">
-      <Sidebar />
+      <Sidebar onAddProduct={openAddProduct} />
 
-      <main className="dashboard-main">
         <header className="topbar">
-          <label className="search-box">
-            <Search size={16} strokeWidth={2.3} />
-            <input type="search" placeholder="Search" />
-          </label>
+          <div className="topbar-content">
+            <NavLink to="/home" className="brand">
+              Inventor.io
+            </NavLink>
+
+            <label className="search-box">
+              <Search size={16} strokeWidth={2.3} />
+              <input type="search" placeholder="Search" />
+            </label>
+          </div>
 
           <div className="topbar-actions">
-            <button type="button" aria-label="Add">
+            <button type="button" aria-label="Add" onClick={openAddProduct}>
               <Plus size={16} strokeWidth={2.3} />
             </button>
             <button type="button" aria-label="Notifications">
@@ -35,9 +44,10 @@ export default function DashboardLayout({ children, title = 'Recent activity' })
           </div>
         </header>
 
-        <h1 className="page-title">{title}</h1>
-        {children}
-      </main>
+        <main className="dashboard-main">
+          <h1 className="page-title">{title}</h1>
+          {children}
+        </main>
     </div>
   )
 }
